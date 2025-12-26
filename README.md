@@ -1,17 +1,34 @@
 # Arch Install Scripts
 
-This is a small suite of scripts aimed at automating some menial
-tasks when installing [Arch Linux](https://www.archlinux.org).
+#
+# /etc/abs.conf
+#
 
-## Requirements
+# el directorio de nivel superior de todos sus PKGBUILD
+[ "$ABSROOT" = "" ] && ABSROOT="/var/abs/"
 
-* GNU coreutils (>= v8.15)
-* util-linux (>= 2.39)
-* POSIX awk
-* bash (>= 4.1)
-* asciidoc (for generating man pages)
+#
+# Servidor desde el que sincronizar
+#
+SYNCSERVER="rsync.archlinux.org"
 
-## License
+#
+# La arquitectura para obtener abs para
+# Ya sea i686 o x86_64
+#
+ARCH="i686"
 
-See COPYING for details.
-https://github.com/pjavier232/arch-install-scripts/blob/master/.github%2Fworkflows%2Fdifferential-shellcheck.yml
+#
+# Lista de espejos de Pacman utilizada para la sincronización mediante archivo tar
+#
+LISTA DE ESPEJOS="/etc/pacman.d/listadeespejos"
+
+#
+# REPOS que serán analizados por abs (en este orden)
+# (anteponga un ! al repositorio para deshabilitarlo)
+#
+# Nota: Si se elimina un repositorio, ¡aún se recupera!
+# Los repositorios deben ir precedidos de un ! para evitar su recuperación
+#
+REPOS=(núcleo extra comunidad multilib !prueba !prueba-comunidad !prueba-multilib
+       !puesta en escena !puesta en escena comunitaria !gnome-inestable !kde-inestable)
