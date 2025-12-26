@@ -32,3 +32,5 @@ LISTA DE ESPEJOS="/etc/pacman.d/listadeespejos"
 #
 REPOS=(núcleo extra comunidad multilib !prueba !prueba-comunidad !prueba-multilib
        !puesta en escena !puesta en escena comunitaria !gnome-inestable !kde-inestable)
+#
+#https://github.com/systemd/systemd/issues/40210
