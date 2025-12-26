@@ -14,3 +14,4 @@ tasks when installing [Arch Linux](https://www.archlinux.org).
 ## License
 
 See COPYING for details.
+https://github.com/pjavier232/arch-install-scripts/blob/master/.github%2Fworkflows%2Fdifferential-shellcheck.yml
